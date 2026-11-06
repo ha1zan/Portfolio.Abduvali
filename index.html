@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abduvali — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <button id="burger" class="btn-icon burger" type="button" aria-label="Menu">☰</button>
+
+    <nav id="menu" class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#connect">Connect</a>
+    </nav>
+
+    <button id="theme-toggle" class="btn-icon" type="button" aria-label="Switch theme">🌙</button>
+  </header>
+
+  <main class="container">
+
+    <section id="home" class="hero">
+      <h1>Hi, I’m Abduvali</h1>
+      <p>
+        A 2nd-year student at Ala-Too College and beginner programmer. I build
+        small projects and work on my portfolio, focusing on clean code and
+        simple, responsive web interfaces.
+      </p>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        My name is Abduvali. I study Software Engineering at Ala-Too College
+        and I’m actively developing my front-end skills.
+      </p>
+      <p>
+        Right now I’m working on my first web projects and building a portfolio.
+        I enjoy creating clean, simple, responsive websites and learning new
+        technologies step by step.
+      </p>
+      <img src="fotoabdu.jpeg" alt="Portrait of Abduvali" width="184" height="246">
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="toolbar">
+        <div id="filters">
+          <button type="button" class="chip active" data-filter="all">All</button>
+          <button type="button" class="chip" data-filter="python">Python</button>
+          <button type="button" class="chip" data-filter="web">Web</button>
+          <button type="button" class="chip" data-filter="mobile">Mobile</button>
+        </div>
+        <input id="search" type="search" placeholder="Search projects…">
+      </div>
+
+      <div class="grid">
+        <article class="card project" data-category="python" data-title="generator password">
+          <h3><a href="https://github.com/ha1zan/generator-password" target="_blank" rel="noopener">Generator password</a></h3>
+          <p>
+            A Python app that generates secure random passwords. Built to
+            practice core logic and handling user input.
+          </p>
+          <small>Python</small>
+        </article>
+
+        <pre class="code project" data-category="python" data-title="generator password"><img src="genpassword.png" alt="gen"></pre>
+
+        <article class="card project" data-category="web" data-title="student hiking club">
+          <h3><a href="https://github.com/ha1zan/Site.html  " target="_blank" rel="noopener">Student hiking club</a></h3>
+          <p>
+            A web interface for a sports club: view upcoming routes, choose
+            events and fill out a registration form. My first structured web design.
+          </p>
+          <small>Web, HTML</small>
+        </article>
+
+        <article class="card project" data-category="mobile" data-title="contact">
+          <h3><a href="#connect">Contact</a></h3>
+          <img src="images.jpg" alt="Phone and laptop keyboard" width="304" height="91">
+          <small>Mobile, Social</small>
+        </article>
+      </div>
+
+      <p id="empty" hidden>Nothing found. Try another word or category.</p>
+    </section>
+
+    <section id="connect">
+      <h2>Connect</h2>
+      <p>
+        Have a question or a project idea? Reach out — I’m open to new
+        opportunities and collaborations.
+      </p>
+
+      <div class="socials">
+        <a class="btn" href="https://www.instagram.com/ha1zan09?rpxt=NHk0bHRoajIxOTN4" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://t.me/ha1zan_09" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn" href="https://wa.me/qr/D5UNDJJIGEX3H1" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://www.linkedin.com/in/abduvali-manapov-03879b449?utm_source=share_via&utm_content=profile&utm_medium=member_android/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+
+      <form id="contact-form" class="card" novalidate>
+        <h3>Write me a message</h3>
+
+        <label>Your name
+          <input type="text" id="name" placeholder="Abduvali">
+          <span class="error" id="name-error"></span>
+        </label>
+
+        <label>Email
+          <input type="email" id="email" placeholder="name@example.com">
+          <span class="error" id="email-error"></span>
+        </label>
+
+        <label>Message
+          <textarea id="message" rows="4" placeholder="Tell me about your idea…"></textarea>
+          <span class="error" id="message-error"></span>
+        </label>
+
+        <button class="btn" type="submit">Send message</button>
+        <p id="form-success" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Abduvali · Ala-Too College</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
